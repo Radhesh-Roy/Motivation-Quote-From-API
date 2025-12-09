@@ -11,11 +11,16 @@ class Motivationquotescreen extends StatefulWidget {
 class _MotivationquotescreenState extends State<Motivationquotescreen> {
   List apiData=[];
   void getApi() async{
-apiData= await Api().getData();
+
+var a= await Api().getData();
+apiData=a['data'];
+setState(() {
+
+});
   }
   @override
   void initState() {
-    getApi();
+   getApi();
     super.initState();
   }
 
